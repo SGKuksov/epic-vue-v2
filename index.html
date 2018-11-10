@@ -19,6 +19,7 @@
     </header>
 
     <section class="slide clear" id="cover">
+        <!-- <h2>Vue</h2> -->
         <img class="cover" src="pictures/vue_img.png" alt="vue logo on black backgroung">
 
         <style>
@@ -26,7 +27,11 @@
                 margin: 30px 0 0;
                 color: white;
                 text-align: center;
-                font-size: 70px;
+                font-size: 150px;
+                font-weight: bold;
+                left: 50%;
+                bottom: 20px;
+                position: absolute;
             }
 
             #cover p {
@@ -55,14 +60,14 @@
 
     <section class="slide">
         <h2>План занятия</h2>
-        <ol>
+        <ul>
             <li>О vue.js</li>
             <li>Требования и окружение</li>
             <li>Установим CLI, и немного поговорим о нем</li>
-            <li>Создадим проект, настроим и изучим архитектуру</li>
+            <li>Создадим проект, настроим и изучим структуру</li>
             <li>Изучим основы</li>
             <li>Немного покодим</li>
-        </ol>
+        </ul>
     </section>
 
     <section class="slide">
@@ -76,24 +81,21 @@
 
     <section class="slide">
         <h2>Инструменты</h2>
-        <ol>
+        <ul>
             <li>Node.js (версии 8.9 или выше)</li>
             <li>Npm или Yarn</li>
             <li><a href="https://vuejs.org/">Vue.js</a></li>
             <li><a href="https://cli.vuejs.org/">Vue CLI 3</a></li>
             <li><a href="https://github.com/vuejs/vue-devtools#vue-devtools">Vue Devtools</a></li>
-        </ol>
+        </ul>
     </section>
 
     <section class="slide">
-        <h2>Установим все необходимое</h2>
-        <p>Vue CLI 3</p>
-        <pre>
-            <code>npm install -g @vue/cli</code>
-            <code>vue --version</code>
-        </pre>
-
-        <p>Клонируем тестовый проект</p>
+        <p>Установим Vue CLI 3</p>
+        <p class="comment">npm install -g @vue/cli</p>
+        <p>Команда, чтобы проверить версию</p>
+        <p class="comment">vue --version</p>
+        <p>Заодно клонируем и установим тестовый проект</p>
         <a href="https://github.com/SGKuksov/bikes">https://github.com/SGKuksov/bikes</a>
     </section>
 
@@ -101,7 +103,7 @@
 
     <section class="slide">
         <h2>Vue CLI 3</h2>
-        <ol>
+        <ul>
             <li>@vue/cli — это npm-пакет, предоставляющий команду vue в терминале</li>
             <li>@vue/cli-service  — это зависимость для разработки построенная на основе webpack</li>
             <li>Плагины для CLI:
@@ -111,82 +113,155 @@
                 <li>модули для тестирования</li>
               </ul>
             </li>
-        </ol>
+        </ul>
     </section>
 
     <section class="slide">
         <h2>Создадим проект</h2>
-        <p>Перейдем в папку с проектами</p>
-        <pre>
-          <code>vue create bikes</code>
-        </pre>
+        <p>Перейдем в папку с проектами и в терминале наберем для создания нового проекта</p>
+        <p class="comment">vue create name-project</p>
+        <p>в нашем случае</p>
+        <p class="comment">vue create bikes</p>
+
+        <style>
+          .comment {
+            background-color: #eee;
+            padding-left: 10px;
+            padding-right: 10px;
+          }
+        </style>
     </section>
 
     <section class="slide">
-        <p>Выберем опции</p>
+        <p>Выберем опции:</p>
         <ol>
-          <li>Manually select features </li>
-          <li>Babel, Router, Vuex, CSS Pre-processors</li>
-          <li>Use history mode for router? Y</li>
-          <li>Sass/SCSS</li>
-          <li>In package.json</li>
-          <li>Save this as a preset for future projects? N</li>
-          <li>Use NPM</li>
+          <li class="comment">Manually select features </li>
+          <li class="comment">Babel, Router, Vuex, CSS Pre-processors</li>
+          <li class="comment">Use history mode for router? Y</li>
+          <li class="comment">Sass/SCSS</li>
+          <li class="comment">In package.json</li>
+          <li class="comment">Save this as a preset for future projects? N</li>
+          <li class="comment">Use NPM</li>
         </ol>
     </section>
 
-    <section class="slide" id="picture">
-        <h2>Vuex</h2>
-        <img class="cover" src="pictures/picture.jpg" alt="">
+    <section class="slide">
+        <h2>Немного о реактивности</h2>
+        <p>Пойдем в codepen и вызовем еще один "Hello world!"</p>
+    </section>
+
+    <section class="slide">
+        <h2>Хуки жизненного цикла</h2>
+        <a href="https://vuejs.org/v2/guide/instance.html#Lifecycle-Diagram">Ссылка</a>
+    </section>
+
+    <section class="slide">
+        <h2>Данные и методы</h2>
+        <ol>
+            <li>data</li>
+            <li>methods</li>
+            <li>computed</li>
+            <li>filters</li>
+            <li>за другими идем в <a href="https://ru.vuejs.org/v2/api/">документацию</a></li>
+        </ol>
+    </section>
+
+    <section class="slide">
+        <h2>Директивы</h2>
+        <ol>
+            <li>v-bind</li>
+            <li>v-if/v-show</li>
+            <li>v-for</li>
+            <li>v-on</li>
+            <li>v-model</li>
+            <li>за другими так же идем в <a href="https://ru.vuejs.org/v2/api/">документацию</a></li>
+        </ol>
+    </section>
+
+    <section class="slide">
+        <h2>Компоненты</h2>
+        <p>Основы компонентов  <a href="https://ru.vuejs.org/v2/guide/components.html">ссылка</a></p>
+        <pre>
+          <code>Vue.component('my-component-name', {</code>
+          <code>  // ... опции ...</code>
+          <code>})</code>
+        </pre>
+
+        <p>Регистрация компонентов <a href="https://ru.vuejs.org/v2/guide/components-registration.html">ссылка</a></p>
+    </section>
+
+    <section class="slide">
+        <h2>Организация компонентов</h2>
+
+        <img class="components" src="pictures/components.png" alt="components">
+        <style>
+          .components {
+            width: 100%;
+          }
+        </style>
+    </section>
+
+    <section class="slide">
+        <h2>Однофайловые компоненты</h2>
+
+        <pre>
+          <code>&lt;template&gt; &lt;!-- разметка  --&gt;&lt;/template&gt; </code>
+          <code>&lt;script&gt; //  скрипт     &lt;/script&gt; </code>
+          <code>&lt;style&gt;  //  стили      &lt;/style&gt; </code>
+        </pre>
+
+        <!-- <p>Подключение через объект components</p> -->
+    </section>
+
+    <section class="slide">
+        <h2>Подключение внешних библиотек</h2>
+
+        <p>Выведем в наше приложение карточки с товарами</p>
+        <ol>
+            <li>Для работы с api подключим библиотеку <a href="https://github.com/axios/axios">axios</a></li>
+            <li>Вынесем ее в vendor</li>
+        </ol>
+    </section>
+
+    <section class="slide vuex-img clear" id="picture">
+        <img class="cover" src="pictures/vuex_img.png" alt="vuex">
 
         <style>
-            #picture h2 {
-                color: white;
+            .vuex-img {
+              background-color: #252b2f;
             }
         </style>
     </section>
 
+    <section class="slide">
+        <h2>Vuex</h2>
+        <p><a href="https://ru.wikipedia.org/wiki/Flux-%D0%B0%D1%80%D1%85%D0%B8%D1%82%D0%B5%D0%BA%D1%82%D1%83%D1%80%D0%B0">FLUX-архитектура.</a> Особенностью Flux является односторонняя направленность передачи данных между компонентами</p>
+    </section>
+
     <section class="slide" id="picture">
-        <h2>Vue Router</h2>
+        <!-- <h2>Vuex</h2> -->
+        <img class="cover" src="pictures/vuex.png" alt="vuex">
+    </section>
+
+    <section class="slide" id="picture">
+        <ol>
+          <li>state</li>
+          <li>actions</li>
+          <li>mutations</li>
+          <li>getters</li>
+        </ol>
+    </section>
+
+    <section class="slide router-img clear" id="picture">
         <figure>
-            <img class="cover" src="pictures/picture.jpg" alt="Orange typewriter on a wooden table close-up">
-            <figcaption class="copyright right white">
-                <a href="http://fiftyfootshadows.net/">© John Carey</a>
-            </figcaption>
+            <img class="cover" src="pictures/vue_router.png" alt="Vue Router">
         </figure>
         <style>
-            #picture h2 {
-                color: white;
+           .router-img {
+              background-color: #1a1c24;
             }
         </style>
-    </section>
-
-    <section class="slide">
-        <h2>Inner navigation</h2>
-        <ol>
-            <li>Lets you reveal list items one by one</li>
-            <li class="next">To keep some key points</li>
-            <li class="next">In secret from audience</li>
-            <li class="next">But it will work only once</li>
-            <li class="next">Nobody wants to see the same joke twice</li>
-        </ol>
-    </section>
-
-    <section class="slide" id="see-more">
-        <h2 class="shout">
-            <img src="pictures/logo.svg" alt="Shower logo">
-            <a href="https://github.com/shower/shower">See more on GitHub</a>
-        </h2>
-        <style>
-            #see-more h2 {
-                font-size: 100px
-            }
-
-            #see-more img {
-                width: 0.72em;
-                height: 0.72em;
-            }
-        </style>
+        
     </section>
 
     <footer class="badge">
