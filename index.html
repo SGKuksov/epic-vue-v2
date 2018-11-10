@@ -214,6 +214,30 @@
     </section>
 
     <section class="slide">
+        <h2>Передача параметров</h2>
+
+        <pre>
+          <p>ПОлучаем данные в компоненте</p>
+          <code>props: {</code>
+          <code>  propA: Object,</code>
+          <code>}</code>
+
+          <p>Передаем данные в компонент</p>
+          <code>&lt;my-elem :prop-a="data" /&gt;</code>
+        </pre>
+        <img class="props" src="pictures/props.png" alt="components">
+
+        <style>
+          .props {
+            height: 300px;
+            position: absolute;
+            right: 70px;
+            top: 150px;
+          }
+        </style>
+    </section>
+
+    <section class="slide">
         <h2>Подключение внешних библиотек</h2>
 
         <p>Выведем в наше приложение карточки с товарами</p>
@@ -234,8 +258,10 @@
     </section>
 
     <section class="slide">
-        <h2>Vuex</h2>
-        <p><a href="https://ru.wikipedia.org/wiki/Flux-%D0%B0%D1%80%D1%85%D0%B8%D1%82%D0%B5%D0%BA%D1%82%D1%83%D1%80%D0%B0">FLUX-архитектура.</a> Особенностью Flux является односторонняя направленность передачи данных между компонентами</p>
+      <h2>Vuex</h2>
+      <p><a href="https://ru.wikipedia.org/wiki/Flux-%D0%B0%D1%80%D1%85%D0%B8%D1%82%D0%B5%D0%BA%D1%82%D1%83%D1%80%D0%B0">FLUX-архитектура.</a> Особенностью Flux является односторонняя направленность передачи данных между компонентами</p>
+
+      <p>Ссылка на <a href="https://vuex.vuejs.org/">документацию</a></p>
     </section>
 
     <section class="slide" id="picture">
@@ -252,16 +278,43 @@
         </ol>
     </section>
 
+    <!-- <section class="slide" id="picture">
+        <h2>Хелперы</h2>
+
+        <pre>
+          <li>state</li>
+          <li>actions</li>
+          <li>mutations</li>
+          <li>getters</li>
+        </pre>
+    </section> -->
+
+
     <section class="slide router-img clear" id="picture">
         <figure>
             <img class="cover" src="pictures/vue_router.png" alt="Vue Router">
         </figure>
+
         <style>
            .router-img {
               background-color: #1a1c24;
             }
         </style>
-        
+
+    </section>
+
+    <section class="slide">
+        <h2>Vue Router</h2>
+
+        <pre>
+          <p>Компонент отображает компонент соответствующий маршруту</p>
+          <code>&lt;router-view&gt;&lt;/router-view&gt;</code>
+
+          <p>Компонент предназначенный для навигации пользователя</p>
+          <code>&lt;router-link to="/foo"&gt;&lt;/router-link&gt;</code>
+        </pre>
+
+        <p>Ссылка на <a href="https://router.vuejs.org/">документацию</a></p>
     </section>
 
     <footer class="badge">
